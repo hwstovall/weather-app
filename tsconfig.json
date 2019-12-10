@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "types": [
+      "node",
+      "webpack-env"
+    ],
+    "rootDirs": [
+      "src",
+      "stories"
+    ]
+  }
+}

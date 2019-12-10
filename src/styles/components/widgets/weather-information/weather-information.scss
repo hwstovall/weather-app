@@ -1,0 +1,6 @@
+@import '../../../variables.scss';
+
+.weather-information {
+  color: $white;
+  text-shadow: 0 0 2px transparentize($black, 0.5);
+}

@@ -1,0 +1,9 @@
+.temperature-display {
+  > div {
+    display: inline-block;
+  }
+
+  .unit {
+    vertical-align: top;
+  }
+}
