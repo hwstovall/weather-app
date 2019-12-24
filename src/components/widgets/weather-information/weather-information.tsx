@@ -20,11 +20,11 @@ export const WeatherInformation = () => {
   let body;
   switch (data.status) {
     case 'ready':
-      const { currently } = data.value;
+      const { currently, daily } = data.value;
 
       body = (
         <React.Fragment>
-          <CurrentConditions currently={currently} today={data.value.daily.data[0]} />
+          <CurrentConditions currently={currently} daily={daily} />
           <DailyForcast daily={data.value.daily} />
         </React.Fragment>
       );

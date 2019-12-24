@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import '../../../styles/components/widgets/weather-information/daily-forecast.scss';
+import '../../../styles/components/widgets/weather-information/hourly-forecast.scss';
 
 import moment from 'moment';
 
@@ -15,28 +15,26 @@ interface DailyForcastProps {
 }
 
 export const DailyForcast = ({ daily }: DailyForcastProps) => (
-  <section className="daily-forecast page-section">
+  <section className="hourly-forecast page-section">
     <h1 className="section-title">8 Day Forecast</h1>
 
-    <Tile>
-      <div className="daily-forecast-days">
-        {daily.data.map((dv) => (
-          <div className="daily-forecast-day">
-            <WeatherIcon icon={dv.icon} />
+    <div className="hourly-forecast-hours">
+      {daily.data.map((dv) => (
+        <div className="hourly-forecast-hour">
+          <WeatherIcon icon={dv.icon} />
 
-            <DateDisplay date={moment.unix(dv.time)} format="ddd" />
+          <DateDisplay date={moment.unix(dv.time)} format="ddd" />
 
-            <TemperatureDisplay
-              temperature={Math.round(dv.apparentTemperatureHigh)}
-              unit="F"
-            />
-            <TemperatureDisplay
-              temperature={Math.round(dv.apparentTemperatureLow)}
-              unit="F"
-            />
-          </div>
-        ))}
-      </div>
-    </Tile>
+          <TemperatureDisplay
+            temperature={Math.round(dv.apparentTemperatureHigh)}
+            unit="F"
+          />
+          <TemperatureDisplay
+            temperature={Math.round(dv.apparentTemperatureLow)}
+            unit="F"
+          />
+        </div>
+      ))}
+    </div>
   </section>
 );

@@ -1,6 +1,7 @@
 @import '../variables.scss';
 
 .city-tile {
+  height: 100%;
   color: transparentize(#fff, 0.1);
   text-shadow: 0 0 5px transparentize($black, 0.95);
   transition: background 0.2s;
@@ -13,8 +14,6 @@
     display: grid;
     row-gap: 1em;
     column-gap: 1em;
-
-    grid-template-columns: 1fr auto;
   }
 
   .weather-icon {

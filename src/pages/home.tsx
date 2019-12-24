@@ -10,25 +10,12 @@ import { WeatherInformation } from '../components/widgets/weather-information/we
 export const Home = () => {
   return (
     <PositionProvider>
-      <div className="page home-page">
-        <div className="background">
-          <BackgroundMap />
-          <div className="background-gradient">
-            <div className="gradient gradient-1" />
-            <div className="gradient gradient-2" />
-            <div className="gradient gradient-3" />
-          </div>
-        </div>
-
-        <div className="page-content">
-          <div className="panel city-list">
-            <CityList />
-          </div>
-          <div className="panel weather-information">
-            <WeatherInformation />
-          </div>
-        </div>
-      </div>
+      <main className="page home-page">
+        <section className="page-content">
+          <CityList />
+          <WeatherInformation />
+        </section>
+      </main>
     </PositionProvider>
   );
 }

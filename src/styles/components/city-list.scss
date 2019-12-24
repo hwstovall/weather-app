@@ -1,5 +1,21 @@
 .city-list {
+  background: linear-gradient(to bottom right, #FFF6B7, #F6416C);
+
+  ul {
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+
+    overflow-y: auto;
+    max-width: 100%;
+  }
+
   li {
-    margin-bottom: 1em;
+    min-width: 200px;
+    height: 150px;
+    
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
   }
 }

@@ -20,12 +20,12 @@ export const CityTile = ({ city, temp }: CityTileProps) => {
   return (
     <Tile className="city-tile" onClick={onClick}>
       <div className="inner">
+        <div className="weather-icon">
+          <WeatherIcon icon="clear-day" />
+        </div>
         <div className="information">
           <TemperatureDisplay temperature={temp} unit="F" />
           <div className="city-name">{city.name}</div>
-        </div>
-        <div className="weather-icon">
-          <WeatherIcon icon="clear-day" />
         </div>
       </div>
     </Tile>

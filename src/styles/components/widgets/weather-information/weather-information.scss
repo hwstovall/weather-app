@@ -1,6 +1,7 @@
 @import '../../../variables.scss';
 
 .weather-information {
+  display: grid;
+  grid-template-columns: minmax(300px, auto) 1fr;
   color: $white;
-  text-shadow: 0 0 2px transparentize($black, 0.5);
 }

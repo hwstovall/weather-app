@@ -14,9 +14,9 @@ export const CityList = () => {
 
   return (
     <div className="city-list">
-      <ul>
+      <ul data-length={cities.length}>
         {cities.map((city) => (
-          <li>
+          <li key={city.name}>
             <CityTile city={city} temp={70} />
           </li>
         ))}

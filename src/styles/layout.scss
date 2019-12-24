@@ -15,6 +15,6 @@ body {
   overflow: auto;
 }
 
-.page-section:not(:first-child) {
-  margin-top: 2em;
+section.page-section {
+  padding: 2em;
 }
