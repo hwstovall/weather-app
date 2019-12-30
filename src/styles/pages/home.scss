@@ -1,12 +1,5 @@
 .page.home-page {
   position: relative;
-
-  .page-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .panel {
-    overflow: auto;
-  }
+  display: grid;
+  grid-template-columns: auto 1fr;
 }

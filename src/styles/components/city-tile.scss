@@ -1,10 +1,12 @@
 @import '../variables.scss';
 
 .city-tile {
-  height: 100%;
-  color: transparentize(#fff, 0.1);
-  text-shadow: 0 0 5px transparentize($black, 0.95);
-  transition: background 0.2s;
+  color: #f6fbff;
+  background: transparentize(darken(#fff, 10%), 0.6);
+  transition: background 0.25s;
+  cursor: pointer;
+  padding: 1em 1.25em;
+  border-radius: $border-radius;
 
   &:hover {
     background: transparentize(#fff, 0.6);
@@ -12,8 +14,7 @@
 
   >.inner {
     display: grid;
-    row-gap: 1em;
-    column-gap: 1em;
+    row-gap: 0.5em;
   }
 
   .weather-icon {

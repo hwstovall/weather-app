@@ -47,7 +47,7 @@ export interface Minutely {
   readonly data: ReadonlyArray<MinutelyValue>;
 }
 
-interface HourlyValue {
+export interface HourlyValue {
   readonly time: number;
   readonly summary: string;
   readonly icon: WeatherIconOptions;

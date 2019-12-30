@@ -2,20 +2,21 @@ import * as React from 'react';
 
 import '../styles/pages/home.scss';
 
-import { CityList } from '../components/city-list';
-import { BackgroundMap } from '../components/widgets/background-map';
 import { PositionProvider } from '../contexts/position-context';
-import { WeatherInformation } from '../components/widgets/weather-information/weather-information';
+import { WeatherInformation } from '../components/weather-information/weather-information';
+import { CityList } from '../components/city-list';
 
 export const Home = () => {
   return (
     <PositionProvider>
-      <main className="page home-page">
-        <section className="page-content">
+      <section className="page home-page">
+        <nav>
           <CityList />
+        </nav>
+        <main>
           <WeatherInformation />
-        </section>
-      </main>
+        </main>
+      </section>
     </PositionProvider>
   );
 }
