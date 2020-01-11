@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { App } from './app';
+import { Router } from './router';
 
+import './styles/global.scss';
 
-ReactDOM.render(<App />, document.getElementById('mount'));
+ReactDOM.render(<Router />, document.getElementById('mount'));

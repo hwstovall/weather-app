@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "commonjs",
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "jsx": "preserve",
     "types": [
       "node",
@@ -10,6 +11,7 @@
     ],
     "rootDirs": [
       "src",
+      "fixtures",
       "stories"
     ]
   }

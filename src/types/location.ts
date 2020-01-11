@@ -5,5 +5,6 @@ export interface Position {
 
 export interface City {
   readonly name: string;
+  readonly slug: string;
   readonly position: Position;
 }

@@ -5,13 +5,7 @@ import '../styles/components/city-tile.scss';
 import { useSpring, animated } from 'react-spring';
 
 import { City } from '../types/location';
-import { PositionContext } from '../contexts/position-context';
 import { TemperatureDisplay } from './widgets/temperature-display';
-
-interface CityTileProps {
-  readonly city: City;
-  readonly temp: number;
-}
 
 const calc = (ref: React.RefObject<HTMLDivElement>, x, y) => {
   if (ref.current) {
@@ -23,9 +17,14 @@ const calc = (ref: React.RefObject<HTMLDivElement>, x, y) => {
 };
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
-export const CityTile = ({ city, temp }: CityTileProps) => {
+interface CityTileProps {
+  readonly city: City;
+  readonly temp: number;
+  readonly onClick: () => void;
+}
+
+export const CityTile = ({ city, temp, onClick }: CityTileProps) => {
   const ref = React.useRef<HTMLDivElement>(null);
-  const { setPosition } = React.useContext(PositionContext);
 
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
@@ -36,8 +35,8 @@ export const CityTile = ({ city, temp }: CityTileProps) => {
     <animated.div
       className="tile city-tile"
       onClick={() => {
+        onClick();
         set({ xys: [0, 0, 1] });
-        setPosition(city.position);
       }}
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(ref, x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
